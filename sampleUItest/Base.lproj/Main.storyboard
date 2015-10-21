@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sampleUItest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,10 +16,61 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crb-Bl-jGh">
+                                <rect key="frame" x="239" y="300" width="123" height="60"/>
+                                <accessibility key="accessibilityConfiguration" identifier="fahrenheitLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEF-Ia-ZWh">
+                                <rect key="frame" x="0.0" y="384" width="600" height="216"/>
+                                <accessibility key="accessibilityConfiguration" identifier="unitPicker"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="FdR-yC-D8I" id="Rgb-Qz-ZXF"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="QUj-Fx-nYZ"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnA-nj-TW1">
+                                <rect key="frame" x="248" y="82" width="105" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="button" label="button"/>
+                                <state key="normal" title="countUpButton"/>
+                                <connections>
+                                    <action selector="changeBackgroundColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ss1-bX-oPa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="counter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GeC-1q-BPE">
+                                <rect key="frame" x="271" y="125" width="59" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="counterLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration" identifier="rootView"/>
+                        <constraints>
+                            <constraint firstItem="GeC-1q-BPE" firstAttribute="top" secondItem="pnA-nj-TW1" secondAttribute="bottom" constant="13" id="IeW-Ct-DLb"/>
+                            <constraint firstItem="aEF-Ia-ZWh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="KPc-4W-PfJ"/>
+                            <constraint firstItem="aEF-Ia-ZWh" firstAttribute="top" secondItem="crb-Bl-jGh" secondAttribute="bottom" constant="24" id="Mjx-7h-oxB"/>
+                            <constraint firstItem="pnA-nj-TW1" firstAttribute="centerX" secondItem="crb-Bl-jGh" secondAttribute="centerX" id="QuS-g3-lyE"/>
+                            <constraint firstItem="GeC-1q-BPE" firstAttribute="centerX" secondItem="pnA-nj-TW1" secondAttribute="centerX" id="Rgf-ej-YXa"/>
+                            <constraint firstItem="pnA-nj-TW1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="62" id="UeN-11-qbK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aEF-Ia-ZWh" secondAttribute="trailing" constant="-20" id="bMq-Ri-B8U"/>
+                            <constraint firstItem="crb-Bl-jGh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fCH-sa-NHk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aEF-Ia-ZWh" secondAttribute="bottom" id="roC-po-etd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="celsiusPicker" destination="aEF-Ia-ZWh" id="trf-Z5-gu2"/>
+                        <outlet property="countLabel" destination="GeC-1q-BPE" id="SwQ-b4-QAN"/>
+                        <outlet property="temperatureLabel" destination="crb-Bl-jGh" id="nbY-ED-Erg"/>
+                        <outlet property="temperatureRange" destination="FdR-yC-D8I" id="0hB-dI-9ww"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="FdR-yC-D8I" customClass="TemperatureRange" customModule="sampleUItest" customModuleProvider="target"/>
             </objects>
         </scene>
     </scenes>

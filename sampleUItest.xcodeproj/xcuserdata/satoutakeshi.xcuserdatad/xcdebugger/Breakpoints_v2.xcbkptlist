@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sampleUItestUITests/sampleUItestUITests.swift"
+            timestampString = "467134573.520159"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "testChangeBackground()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sampleUItestUITests.sampleUItestUITests.testChangeBackground (sampleUItestUITests.sampleUItestUITests)() -&gt; ()"
+                  moduleName = "sampleUItestUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/satoutakeshi/product/iPhoneApp/sampleUItest/sampleUItestUITests/sampleUItestUITests.swift"
+                  timestampString = "467134350.325636"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "243">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sampleUItestUITests.sampleUItestUITests.(testChangeBackground (sampleUItestUITests.sampleUItestUITests) -&gt; () -&gt; ()).(implicit closure #1)"
+                  moduleName = "sampleUItestUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/satoutakeshi/product/iPhoneApp/sampleUItest/sampleUItestUITests/sampleUItestUITests.swift"
+                  timestampString = "467134350.326056"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sampleUItestUITests.sampleUItestUITests.(testChangeBackground (sampleUItestUITests.sampleUItestUITests) -&gt; () -&gt; ()).(implicit closure #2)"
+                  moduleName = "sampleUItestUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/satoutakeshi/product/iPhoneApp/sampleUItest/sampleUItestUITests/sampleUItestUITests.swift"
+                  timestampString = "467134350.326303"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "30">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

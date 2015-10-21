@@ -1,3 +1,4 @@
+
 //
 //  sampleUItestUITests.swift
 //  sampleUItestUITests
@@ -31,6 +32,30 @@ class sampleUItestUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let app = XCUIApplication()
+        app.pickerWheels["\u{6442}\u{6c0f}0\u{5ea6}"].tap()
+        //ピッカービューはtap()メソッドではピッカービューではアプリ落ちてしまう。
+        //adjustToPickerWheelValue()メソッドで値を変える
+        app.pickerWheels["\u{6442}\u{6c0f}0\u{5ea6}"].adjustToPickerWheelValue("\u{6442}\u{6c0f}1\u{5ea6}")
+        
+        XCTAssertEqual(app.staticTexts["fahrenheitLabel"].label, "華氏33度")
+        
+        app.pickerWheels["摂氏1度"].adjustToPickerWheelValue("摂氏2度")
+
+ 
+        XCTAssertEqual(app.staticTexts["fahrenheitLabel"].label, "華氏35度")
+        
     }
     
+    func testChangeBackground(){
+
+        let button = XCUIApplication().buttons["button"]
+        button.tap()
+        XCTAssertEqual(XCUIApplication().staticTexts["counterLabel"].label, "0")
+        button.tap()
+        XCTAssertEqual(XCUIApplication().staticTexts["counterLabel"].label, "1")
+        
+        
+    }
 }

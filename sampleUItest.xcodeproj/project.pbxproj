@@ -14,6 +14,10 @@
 		30DD3C8A1BD6902A0017B41F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30DD3C881BD6902A0017B41F /* LaunchScreen.storyboard */; };
 		30DD3C951BD6902A0017B41F /* sampleUItestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DD3C941BD6902A0017B41F /* sampleUItestTests.swift */; };
 		30DD3CA01BD6902A0017B41F /* sampleUItestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DD3C9F1BD6902A0017B41F /* sampleUItestUITests.swift */; };
+		30DD3CB01BD71C5F0017B41F /* TemperatureRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DD3CAF1BD71C5F0017B41F /* TemperatureRange.swift */; settings = {ASSET_TAGS = (); }; };
+		30DD3CB11BD71C5F0017B41F /* TemperatureRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DD3CAF1BD71C5F0017B41F /* TemperatureRange.swift */; settings = {ASSET_TAGS = (); }; };
+		30DD3CB31BD7203F0017B41F /* UnitConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DD3CB21BD7203F0017B41F /* UnitConverter.swift */; settings = {ASSET_TAGS = (); }; };
+		30DD3CB41BD7203F0017B41F /* UnitConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DD3CB21BD7203F0017B41F /* UnitConverter.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,8 @@
 		30DD3C9B1BD6902A0017B41F /* sampleUItestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sampleUItestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30DD3C9F1BD6902A0017B41F /* sampleUItestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleUItestUITests.swift; sourceTree = "<group>"; };
 		30DD3CA11BD6902A0017B41F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30DD3CAF1BD71C5F0017B41F /* TemperatureRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureRange.swift; sourceTree = "<group>"; };
+		30DD3CB21BD7203F0017B41F /* UnitConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,8 @@
 				30DD3C7F1BD6902A0017B41F /* AppDelegate.swift */,
 				30DD3C811BD6902A0017B41F /* ViewController.swift */,
 				30DD3C831BD6902A0017B41F /* Main.storyboard */,
+				30DD3CAF1BD71C5F0017B41F /* TemperatureRange.swift */,
+				30DD3CB21BD7203F0017B41F /* UnitConverter.swift */,
 				30DD3C861BD6902A0017B41F /* Assets.xcassets */,
 				30DD3C881BD6902A0017B41F /* LaunchScreen.storyboard */,
 				30DD3C8B1BD6902A0017B41F /* Info.plist */,
@@ -257,6 +265,8 @@
 			files = (
 				30DD3C821BD6902A0017B41F /* ViewController.swift in Sources */,
 				30DD3C801BD6902A0017B41F /* AppDelegate.swift in Sources */,
+				30DD3CB31BD7203F0017B41F /* UnitConverter.swift in Sources */,
+				30DD3CB01BD71C5F0017B41F /* TemperatureRange.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +274,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30DD3CB41BD7203F0017B41F /* UnitConverter.swift in Sources */,
+				30DD3CB11BD71C5F0017B41F /* TemperatureRange.swift in Sources */,
 				30DD3C951BD6902A0017B41F /* sampleUItestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

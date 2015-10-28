@@ -8,17 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate {
+public class ViewController: UIViewController, UIPickerViewDelegate {
 
     @IBOutlet weak var countLabel: UILabel!
     var count:Int! = 0
     @IBOutlet var temperatureRange: TemperatureRange!
-    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel! {
+        didSet {
+            temperatureLabel.text = "test"
+        }
+    }
     @IBOutlet weak var celsiusPicker: UIPickerView!
     
+    @IBOutlet weak var countButton: UIButton!
     private let converter = UnitConverter()
     
-    override func viewDidLoad() {
+    var str : String = {
+        
+        return ""
+    }()
+    
+    override public func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -34,18 +44,18 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         return celsiusPicker.numberOfRowsInComponent(0) / 2
     }
 
-    override func didReceiveMemoryWarning() {
+    override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
     //MARK: ピッカービューデリゲートメソッド
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    public func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let celsiusValue = temperatureRange.values[row]
         return "摂氏\(celsiusValue)度"
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    public func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         displayConvertedTemperatureForRow(row)
     }
 

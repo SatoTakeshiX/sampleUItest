@@ -8,6 +8,7 @@
 //
 
 import XCTest
+import sampleUItest
 
 class sampleUItestUITests: XCTestCase {
         
@@ -19,7 +20,7 @@ class sampleUItestUITests: XCTestCase {
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
+       // XCUIApplication().launch()
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
@@ -34,6 +35,7 @@ class sampleUItestUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
         let app = XCUIApplication()
+        app.launch()
         app.pickerWheels["\u{6442}\u{6c0f}0\u{5ea6}"].tap()
         //ピッカービューはtap()メソッドではピッカービューではアプリ落ちてしまう。
         //adjustToPickerWheelValue()メソッドで値を変える
@@ -41,7 +43,7 @@ class sampleUItestUITests: XCTestCase {
         
         XCTAssertEqual(app.staticTexts["fahrenheitLabel"].label, "華氏33度")
         
-        app.pickerWheels["摂氏1度"].adjustToPickerWheelValue("摂氏2度")
+        app.pickerWheels["摂氏0度"].adjustToPickerWheelValue("摂氏2度")
 
  
         XCTAssertEqual(app.staticTexts["fahrenheitLabel"].label, "華氏35度")
@@ -56,6 +58,22 @@ class sampleUItestUITests: XCTestCase {
         button.tap()
         XCTAssertEqual(XCUIApplication().staticTexts["counterLabel"].label, "1")
         
+        
+    }
+    
+    func testdemo(){
+        
+        let app = XCUIApplication()
+        app.launch()
+        let button = app.buttons["button"]
+        button.tap()
+        button.tap()
+        button.tap()
+        button.doubleTap()
+        button.tap()
+        app.pickerWheels["摂氏0度"].tap()
+       // app.pickerWheels["摂氏1度"].tap()
+       // app.pickerWheels["摂氏2度"].tap()
         
     }
 }
